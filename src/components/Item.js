@@ -7,12 +7,12 @@ const Item = ({ item }) => {
         <input
           type="checkbox"
           checked={item.packed}
-          onChange={() => {}}
+          onChange={() => item.toggle()}
           id={item.id}
         />
         {item.value}
       </label>
-      <button className="Item-remove" onClick={() => {}}>
+      <button className="Item-remove" onClick={() => item.remove()}>
         Remove
       </button>
     </article>
