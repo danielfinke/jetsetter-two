@@ -7,7 +7,7 @@ export default class Item {
   @observable value = '';
   @observable packed = false;
 
-  constructor({ value, list }) {
+  constructor(value, list) {
     this.value = value;
     this.list = list;
   }

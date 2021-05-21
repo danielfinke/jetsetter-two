@@ -27,7 +27,14 @@ export default class ItemStore {
   }
 
   @action.bound
-  addItem() {}
+  addItem(value) {
+    this.items.push(new Item(value, this));
+  }
+
+  @action.bound
+  removeItem(itemToRemove) {
+    this.items = this.items.filter((item) => item !== itemToRemove);
+  }
 
   @action.bound
   updatePackedItemsFilter(filter) {
